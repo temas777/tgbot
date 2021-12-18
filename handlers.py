@@ -80,7 +80,7 @@ def setup_dispatcher(dp):
 
 
 def handle_text (message):
-    @bot.message_handler(commands=['1'])
+    dp.add_handler(CommandHandler('s', s))
     bot.send_message(message.chat.id, "Введите данные")
     @bot.message_handler(content_types=['text'])
     def handle_text(message):
