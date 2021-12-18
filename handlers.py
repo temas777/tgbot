@@ -79,14 +79,5 @@ def setup_dispatcher(dp):
     return dp
 
 
-@bot.message_handler(commands=['add'])
-def handle_text(message):
-    cid = message.chat.id
-    msgPrice = bot.send_message(cid, 'Set your price:')
-    bot.register_next_step_handler(msgPrice , step_Set_Price)
-
-def step_Set_Price(message):
-    cid = message.chat.id
-    userPrice= message.text
 
 
