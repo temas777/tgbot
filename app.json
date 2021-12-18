@@ -10,7 +10,7 @@
     "repository": "https://github.com/ohld/telegram-support-bot",
     "success_url": "https://github.com/ohld/telegram-support-bot",
     "env": {
-      "TELEGRAM_SUPPORT_CHAT_ID": {
+      "T": {
         "description": "Telegram chat_id where the bot will forward all incoming messages. If you want to know your chat_id - add this bot https://t.me/ShowJsonBot to your chat."
       }
     }
