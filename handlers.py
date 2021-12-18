@@ -77,3 +77,12 @@ def setup_dispatcher(dp):
     dp.add_handler(MessageHandler(Filters.chat_type.private, forward_to_chat))
     dp.add_handler(MessageHandler(Filters.chat(TELEGRAM_SUPPORT_CHAT_ID) & Filters.reply, forward_to_user))
     return dp
+
+
+def handle_text (message):
+    @bot.message_handler(commands=['1'])
+    bot.send_message(message.chat.id, "Введите данные")
+    @bot.message_handler(content_types=['text'])
+    def handle_text(message):
+        txt = message.text
+        print(txt)
