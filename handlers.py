@@ -79,7 +79,7 @@ def setup_dispatcher(dp):
     return dp
 
 
-@bot.message_handler(commands=['addproduct'])
+@bot.message_handler(commands=['add'])
 def handle_text(message):
     cid = message.chat.id
     msgPrice = bot.send_message(cid, 'Set your price:')
